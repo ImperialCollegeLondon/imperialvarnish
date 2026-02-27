@@ -1,11 +1,10 @@
-# {varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
+# {imperial-varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
 
-[![varnish status badge](https://carpentries.r-universe.dev/badges/varnish)](https://carpentries.r-universe.dev)
-
-This project is part of [The Carpentries
+This project is a Imperial College London themed fork of [{varnish}] from [The Carpentries
 Workbench](https://carpentries.github.io/workbench). It serves as a template
-for Carpentries lessons adapted from [{pkgdown}]. There is no need to call this
-package directly, it is installed via the [{sandpaper}] package.
+for internally developed Carpentries style lessons.
+
+The changes to the theme replace The Carpentries branding with the Imperial College London [branding](https://brand.imperial.ac.uk/).
 
 The html templates use [mustache templating
 language](https://mustache.github.io/mustache.5.html) while the CSS and
@@ -13,15 +12,8 @@ JavaScript are compiled and minified on GitHub Actions.
 
 ## Installation
 
-To install this package, you can use our [R-universe repository](https://carpentries.r-universe.dev),
-which is updated hourly.
-
-```r
-install.packages("varnish", repos = "https://carpentries.r-universe.dev")
-```
-
-There is no need to call this package directly, [{sandpaper}] will detect it and
-copy the styling and templates to your lesson website.
+This fork of {varnish} is only for use in internally developed courses at Imperial College London and it should **not** be
+used in official carpentries repositories.
 
 ## CSS and JavaScript
 
@@ -30,7 +22,7 @@ uglifyjs. Their sources live in the [`source/`](source/) folder with directives
 to include their dependencies (bootstrap, jquery, feather).
 
 The minified versions are built via GitHub actions any time one of the source
-files is changed. 
+files is changed.
 
 To build this locally, you need to make sure to have a working version of
 `node` and `npm`, which can be installed [via the node version manager, nvm](https://github.com/nvm-sh/nvm#intro).
@@ -60,17 +52,17 @@ bash squash-a-script.sh # use the uglifyjs node module to compile JS
 
 We have customized the following templates:
 
- - [content-chapter] displays the episodes for the lessons
- - [content-syllabus] is the landing page for the lessons
- - [content-extra] is used for pages that are not chapters and do not need
+- [content-chapter] displays the episodes for the lessons
+- [content-syllabus] is the landing page for the lessons
+- [content-extra] is used for pages that are not chapters and do not need
    positional navigation
- - [content-overview] is like content-extra, but is meant for the home page of
+- [content-overview] is like content-extra, but is meant for the home page of
    an overview lesson
- - [head] contains the metadata and script loading
- - [navbar] is a bit of misnomer, but it contains the sidebar navigation
- - [header] contains metadata and favicons
- - [footer] contains navigation, credits, and JSON metadata
- - [layout] pulls everything together
+- [head] contains the metadata and script loading
+- [navbar] is a bit of misnomer, but it contains the sidebar navigation
+- [header] contains metadata and favicons
+- [footer] contains navigation, credits, and JSON metadata
+- [layout] pulls everything together
 
 ### Parameters
 
@@ -121,7 +113,7 @@ template:
 
 Each of these parameters can be accessed via the `{{ yaml }}` mustache context.
 For example, this adds a paragraph describing the license provided that the
-`{{ license }}` parameter is present in the yaml: 
+`{{ license }}` parameter is present in the yaml:
 
 ```html
 {{#yaml}}{{#license}}
@@ -129,18 +121,17 @@ For example, this adds a paragraph describing the license provided that the
 {{/license}}{{/yaml}}
 ```
 
-
 #### Global
 
 (TODO: write descriptions of these parameters)
 
 #### Page-specific
 
- - `{{ instructor }}`: a boolean indicating instructor view
- - `{{ aio }}`: a boolean indicating that the aio page should be included
- - `{{ this_page }}`: The file-only HTML path of the current page (e.g. `index.html` or `introduction.html`).
- - `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes. 
- - `{{{ resources }}}`: an additional part of the sidebar giving extra resource elements avaialable in mobile view.
+- `{{ instructor }}`: a boolean indicating instructor view
+- `{{ aio }}`: a boolean indicating that the aio page should be included
+- `{{ this_page }}`: The file-only HTML path of the current page (e.g. `index.html` or `introduction.html`).
+- `{{{ schedule }}}`: The HTML sidebar of the schedule of episodes.
+- `{{{ resources }}}`: an additional part of the sidebar giving extra resource elements avaialable in mobile view.
 
 [{pkgdown}]: https://r-lib.github.io/pkgdown
 [{sandpaper}]: https://github.com/zkamvar/sandpaper

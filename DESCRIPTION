@@ -56,6 +56,11 @@ Authors@R: c(
     person(given = "Sheargrub",
            role = c("ctb"),
            email = "sheargrub@gmail.com"),
+    person(given = "Saranjeet Kaur",
+           family = "Bhogal",
+           role = c("ctb"),
+           email = "s.bhogal@imperial.ac.uk",
+           comment = c(ORCID = "0000-0002-7038-1457")),
     person()
     )
 Description: This package does nothing but contain template HTML CSS and JS files.
@@ -64,5 +69,5 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-URL: https://carpentries.github.io/varnish/
-BugReports: https://github.com/carpentries/varnish/issues/
+URL: https://github.com/ImperialCollegeLondon/imperial-varnish
+BugReports: https://github.com/ImperialCollegeLondon/imperial-varnish/issues/
