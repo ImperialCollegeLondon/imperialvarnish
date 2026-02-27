@@ -1,4 +1,4 @@
-# {imperial-varnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
+# {imperialvarnish}: Template for The Carpentries Workbench <img src='man/figures/logo.png' align='right' alt='' width=120 />
 
 This project is a Imperial College London themed fork of [{varnish}] from [The Carpentries
 Workbench](https://carpentries.github.io/workbench). It serves as a template
